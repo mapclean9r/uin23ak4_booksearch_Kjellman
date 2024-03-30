@@ -1,0 +1,26 @@
+.book-cards{
+    text-align: center;
+    border-top: 1px solid;
+
+    ul{
+
+        li{
+
+            border-left: 1px solid;
+            border-right: 1px solid;
+            border-bottom: 1px solid;
+            border-top: 1px solid;
+            border-color: orange;
+            justify-content:center;
+            display:block;
+            padding: 2rem;
+            margin: 2rem;
+
+            button{
+                max-height: 3rem;
+            }
+
+        }
+    }
+
+}
