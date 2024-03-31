@@ -1,8 +1,10 @@
+import SearchResults from "./SearchResults";
+
 export default function Layout({children}){
     return(
         <>
 
-            <h1>Searchbar</h1>
+            <SearchResults/>
 
         <main>
             {children}
