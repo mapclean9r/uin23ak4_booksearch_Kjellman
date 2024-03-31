@@ -1,9 +1,15 @@
+.head{
+    font-size: 50px;
+    text-decoration: solid;
+}
+
 form{
     padding: 5rem;
     
     .bar{
-        height: 50px;
-        width: 500px;
+        height: 80px;
+        width: 800px;
+        font-size: 35px;
     }
 
     .sub{
@@ -11,4 +17,5 @@ form{
         width: 100px;
         cursor: pointer;
     }
+
 }

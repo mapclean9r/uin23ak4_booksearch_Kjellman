@@ -22,16 +22,16 @@ export default function BookCard({bookname}){
         setIsbn(isbnurl)
     }
 
-//https://covers.openlibrary.org/a/olid/OL23919A-M.jpg < bilde
-//<img href={`https://covers.openlibrary.org/a${post?.docs[i].key}.jpg`}>e</img>
+
+//<img src={`https://covers.openlibrary.org/a${item.key}.jpg`} alt="image"></img> funker ikke ;()
 console.log(bookname)
+console.log(post)
 
 return(
     <section className="book-cards">
         <h1>Book archive</h1>  
         <ul className="book-items">
             {post?.docs?.map((item, i) => <li key={i}>
-            
                 <h2>{item.title}</h2>
                 <p>Published: {item.first_publish_year}</p>
                 <p>Author: {item.author_name}</p>
