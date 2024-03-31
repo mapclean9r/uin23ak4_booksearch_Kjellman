@@ -1,25 +1,35 @@
 .book-cards{
-    text-align: center;
     border-top: 1px solid;
 
-    ul{
 
+    h1{
+        display: block;
+        text-align: center;
+    }
+
+    ul{
+        list-style: none;
+        padding: none;
+        margin: none;
+        display: inline-block;
+        text-align: left;
         li{
 
             border-left: 1px solid;
             border-right: 1px solid;
             border-bottom: 1px solid;
             border-top: 1px solid;
+
             border-color: orange;
-            justify-content:center;
-            display:block;
+            background-color: #101213;
+
+            max-width: 100%;
             padding: 2rem;
             margin: 2rem;
-
             button{
                 max-height: 3rem;
             }
-
+            
         }
     }
 

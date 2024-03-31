@@ -5,6 +5,7 @@ export default function BookCard(){
 
     const [post, setPost] = useState()
     const [isbn, setIsbn] = useState()
+    const [image, setImage] = useState()
     const amazonUrl = `https://www.amazon.com/s?k=${isbn}`
 
     const getBook = async() => {
@@ -23,10 +24,12 @@ export default function BookCard(){
     }
 
 //https://covers.openlibrary.org/a/olid/OL23919A-M.jpg < bilde
+//<img href={`https://covers.openlibrary.org/a${post?.docs[i].key}.jpg`}>e</img>
+console.log(post)
 
 return(
     <section className="book-cards">
-        <h1>Books</h1>  
+        <h1>Book archive</h1>  
         <ul className="book-items">
             {post?.docs?.map((item, i) => <li key={i}>
             
@@ -35,7 +38,7 @@ return(
                 <p>Author: {post?.docs[i].author_name}</p>
                 <p>Average Rating: {post?.docs[i].ratings_average}</p>
                 <button onClick={()=>handleClick(post?.docs[i].isbn[0])}>
-                    <a href={`https://www.amazon.com/s?k=${isbn}`}>Amazon</a>
+                    <a href={`https://www.amazon.com/s?k=${isbn}`}>Amazon store</a>
                 </button>
                 </li>)}
         </ul>
