@@ -30,7 +30,7 @@ function App() {
   return (
     <Layout>
       <Routes>
-        <Route path="/" element={<BookCard/>}/>
+
       </Routes>
     </Layout>
   )

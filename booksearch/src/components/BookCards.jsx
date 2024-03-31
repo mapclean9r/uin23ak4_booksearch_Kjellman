@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-export default function BookCard(){
+export default function BookCard({bookname}){
 
     const [post, setPost] = useState()
     const [isbn, setIsbn] = useState()
     const amazonUrl = `https://www.amazon.com/s?k=${isbn}`
 
     const getBook = async() => {
-        fetch("https://openlibrary.org/search.json?title=james-bond")
+        fetch(`https://openlibrary.org/search.json?title=${bookname}`)
         .then(response => response.json())
         .then(data => setPost(data))
         .catch(error => console.error(error))
@@ -24,7 +24,7 @@ export default function BookCard(){
 
 //https://covers.openlibrary.org/a/olid/OL23919A-M.jpg < bilde
 //<img href={`https://covers.openlibrary.org/a${post?.docs[i].key}.jpg`}>e</img>
-console.log(post)
+console.log(bookname)
 
 return(
     <section className="book-cards">
