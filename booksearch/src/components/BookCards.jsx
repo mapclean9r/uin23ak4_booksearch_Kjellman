@@ -19,7 +19,12 @@ export default function BookCard({bookname}){
     },)
 
     const handleClick = (isbnurl)=>{
-        setIsbn(isbnurl)
+        for(let i = 0 ; i < isbnurl.length; i++){
+            if(isbnurl[i] != ""){
+                setIsbn(isbnurl[i])
+                return
+            }
+        }
     }
 
 //<img src={`https://covers.openlibrary.org/b/isbn/${item.i_cover}.jpg`} alt="image"></img>
@@ -38,7 +43,8 @@ return(
                 <p>Published: {item.first_publish_year}</p>
                 <p>Author: {item.author_name}</p>
                 <p>Average Rating: {item.ratings_average}</p>
-                <button onClick={()=>handleClick(item.isbn[0])}>
+                
+                <button onClick={()=>handleClick(item.isbn)}>
                     <a href={`https://www.amazon.com/s?k=${isbn}`}>Amazon store</a>
                 </button>
                 </li>)}
