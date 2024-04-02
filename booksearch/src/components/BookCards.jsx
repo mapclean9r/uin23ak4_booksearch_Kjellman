@@ -43,7 +43,6 @@ return(
                 <p>Published: {item.first_publish_year}</p>
                 <p>Author: {item.author_name}</p>
                 <p>Average Rating: {item.ratings_average}</p>
-                
                 <button onClick={()=>handleClick(item.isbn)}>
                     <a href={`https://www.amazon.com/s?k=${isbn}`}>Amazon store</a>
                 </button>
