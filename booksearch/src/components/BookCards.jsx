@@ -26,6 +26,7 @@ export default function BookCard({bookname}){
 
 console.log(bookname)
 console.log(post)
+console.log(isbn)
 
 return(
     <section className="book-cards">
@@ -33,6 +34,7 @@ return(
         <ul className="book-items">
             {post?.docs?.map((item, i) => <li key={i}>
                 <h2>{item.title}</h2>
+                <img src={`https://covers.openlibrary.org/b/id/${item.cover_i}.jpg`} alt="image"></img>
                 <p>Published: {item.first_publish_year}</p>
                 <p>Author: {item.author_name}</p>
                 <p>Average Rating: {item.ratings_average}</p>
