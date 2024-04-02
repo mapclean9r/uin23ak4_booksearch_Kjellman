@@ -22,8 +22,8 @@ export default function BookCard({bookname}){
         setIsbn(isbnurl)
     }
 
+//<img src={`https://covers.openlibrary.org/b/isbn/${item.i_cover}.jpg`} alt="image"></img>
 
-//<img src={`https://covers.openlibrary.org/a${item.key}.jpg`} alt="image"></img> funker ikke ;()
 console.log(bookname)
 console.log(post)
 
