@@ -3,7 +3,8 @@ import BookCard from "./BookCards"
 
 export default function SearchResults(){
 
-    const [search, setSearch] = useState("james bond")
+    const [search, setSearch] = useState("")
+    const [result, setResult] = useState("james bond")
 
     const handleChange = (event)=>{
         if(event.target.value.length >= 3){
@@ -11,17 +12,27 @@ export default function SearchResults(){
         }
     }
 
+    const handleSubmit = (e)=>{
+        e.preventDefault()
+        setResult(search)
+        
+    }
+
     console.log(search)
 
     //<input className="sub" type="submit" value="Search"></input>
     return(
         <>
-        <h2 className="head">Book-lookup</h2>
-        <p className="subtext">Open Liberary API book lookup</p>
-        <form className="searchbar">
+        <header className="header">
+            <h1 className="head">Book-lookup</h1>
+            <p className="subtext">Open Liberary API book lookup</p>
+        </header>
+
+        <form className="searchbar" onSubmit={handleSubmit}>
             <input className="bar" type="txt" id="search" placeholder="james bond" onChange={handleChange}></input>
+            <input className="sub" type="submit" value="Search" ></input>
         </form>
-        <BookCard bookname={search}/>
+        <BookCard bookname={result}/>
         </>
     )
 }

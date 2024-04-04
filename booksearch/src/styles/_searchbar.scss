@@ -1,32 +1,52 @@
-.head{
-    font-size: 50px;
-    text-decoration: solid;
-    padding-bottom: 0;
-    font-size: 4rem;
+
+.header{
+    display: inline-block;
+    .head{
+        text-decoration: solid;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    .subtext{
+        margin: 0;
+        padding: 0;
+        padding-bottom: 4rem;
+    }
 }
 
-.subtext{
-    margin: 0;
-    padding: 0;
-}
-form{
-    padding-top: 2rem;
-    padding-bottom: 5rem;
+    form{
+        max-width: 100%;
+        padding-top: 2rem;
+        padding-bottom: 5rem;
+        display: flex;
+        justify-content: center;
+
     
     .bar{
-        max-width: 100%;
-        max-height: 100%;
+        max-width: 60%;
+        max-height: 60%;
+        min-width: 20%;
+        min-height: 20%;
         height: 80px;
         width: 800px;
         font-size: 35px;
         background-color: white;
         border-color: white;
         color: #772620;
+        justify-content: center;
     }
 
     .sub{
-        height: 56px;
-        width: 100px;
+        border: none;
+        background-color: darkslategray;
+        max-width: 20%;
+        max-height: 20%;
+
+        height: 90px;
+        width: 90px;
+        margin-left: 0.1rem;
+        border-radius: 0px;
+
         cursor: pointer;
     }
 

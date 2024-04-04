@@ -8,15 +8,18 @@ export default function BookCard({bookname}){
     const amazonUrl = `https://www.amazon.com/s?k=${isbn}`
 
     const getBook = async() => {
-        fetch(`https://openlibrary.org/search.json?title=${bookname}`)
-        .then(response => response.json())
-        .then(data => setPost(data))
-        .catch(error => console.error(error))
+        try{
+            const response = await fetch(`https://openlibrary.org/search.json?title=${bookname}`)
+            const data = await response.json()
+            setPost(data)
+        } catch{
+            console.error("api unable to load")
+        }
     }
 
     useEffect(()=>{
         getBook()
-    },)
+    },[bookname])
 
     const handleClick = (isbnurl)=>{
         for(let i = 0 ; i < isbnurl.length; i++){
@@ -27,11 +30,6 @@ export default function BookCard({bookname}){
         }
     }
 
-//<img src={`https://covers.openlibrary.org/b/isbn/${item.i_cover}.jpg`} alt="image"></img>
-
-console.log(bookname)
-console.log(post)
-console.log(isbn)
 
 return(
     <section className="book-cards">
