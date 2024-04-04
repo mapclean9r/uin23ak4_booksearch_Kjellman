@@ -3,32 +3,38 @@
     border-left: 1px solid;
     border-right: 1px solid;
     border-bottom: 1px solid;
-    background-color: #16181a;
+    background-color: #2b1f1a;
+    border-color: #521901;
 
     h1{
         display: block;
         text-align: center;
+        color: white;
+        font-weight: bold;
     }
 
     ul{
         list-style: none;
         padding: none;
         margin: none;
-        display: inline-block;
+        display: flex;
+        flex-wrap: wrap;
         text-align: left;
+        justify-content: left;
+
         li{
 
             border-left: 1px solid;
             border-right: 1px solid;
             border-bottom: 1px solid;
             border-top: 1px solid;
-
-            border-color: orange;
-            background-color: #101213;
-
-            max-width: 100%;
+            border-color: rgb(12, 31, 2);
+            background-color: #494e47;
+            max-width: 21.8%;
+            min-width: 21.8%;
             padding: 2rem;
             margin: 2rem;
+
             button{
                 max-height: 3rem;
             }

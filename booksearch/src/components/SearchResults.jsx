@@ -16,7 +16,8 @@ export default function SearchResults(){
     //<input className="sub" type="submit" value="Search"></input>
     return(
         <>
-        <h2 className="head">Book search</h2>
+        <h2 className="head">Book-lookup</h2>
+        <p className="subtext">Open Liberary API book lookup</p>
         <form className="searchbar">
             <input className="bar" type="txt" id="search" placeholder="james bond" onChange={handleChange}></input>
         </form>
