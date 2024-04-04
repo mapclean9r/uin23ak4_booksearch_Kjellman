@@ -17,10 +17,7 @@ export default function SearchResults(){
         setResult(search)
         
     }
-
-    console.log(search)
-
-    //<input className="sub" type="submit" value="Search"></input>
+    
     return(
         <>
         <header className="header">
